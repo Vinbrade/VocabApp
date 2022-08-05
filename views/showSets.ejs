@@ -1,0 +1,27 @@
+<%- include("partials/header") %> 
+
+<%- include("partials/navbar") %>
+
+<div
+class="collapse navbar-collapse item-holder  d-flex justify-content-around"
+id="navbarSupportedContent"
+>
+<a class="nav-item text-center <% if(difficulty === "easy") {  %> selected <% } %> " href="/easy">Easy</a>
+<a class="nav-item text-center <% if(difficulty === "medium") {  %> selected <% } %> " href="/medium">Medium</a>
+<a class="nav-item text-center <% if(difficulty === "advanced") {  %> selected <% } %> " href="/advanced">Advanced</a>
+</div>
+</div>
+</nav>
+
+<div class="container">
+    <% if(difficulty === "easy") { %> 
+        <h2>Easy stuff</h2>
+    <% } else if(difficulty === "medium") { %> 
+        <h2>Medium stuff</h2>
+    <% } else { %> 
+        <h2>Advanced stuff</h2>
+    <% } %> 
+</div>
+
+
+<%- include("partials/footer") %> 
