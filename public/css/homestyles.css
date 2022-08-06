@@ -15,6 +15,8 @@
     text-decoration: none;
     padding: 0.3em;
     color: white;
+    border-radius: 0.3rem;
+    transition: all 200ms ease-out;
 }
 
 .nav-item:hover,
@@ -22,13 +24,10 @@
 .selected {
     background-color: white;
     color: black;
-    border-radius: 0.3rem;
 }
 
-.item-holder {
-    max-width: 400px;
-}
 
 .navbar {
     box-shadow: 0 2.3px 5px 3.3px rgb(0 0 0 / 40%)
 }
+

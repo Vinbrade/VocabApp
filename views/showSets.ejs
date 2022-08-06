@@ -1,26 +1,33 @@
 <%- include("partials/header") %> 
 
-<%- include("partials/navbar") %>
-
-<div
-class="collapse navbar-collapse item-holder  d-flex justify-content-around"
-id="navbarSupportedContent"
->
-<a class="nav-item text-center <% if(difficulty === "easy") {  %> selected <% } %> " href="/easy">Easy</a>
-<a class="nav-item text-center <% if(difficulty === "medium") {  %> selected <% } %> " href="/medium">Medium</a>
-<a class="nav-item text-center <% if(difficulty === "advanced") {  %> selected <% } %> " href="/advanced">Advanced</a>
-</div>
-</div>
+<%- include("partials/navbar")  %> 
+  
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+    ><div class="navbar-nav ms-lg-auto">
+        <a class="nav-item text-center ms-3 mb-2<% if(difficulty === "easy") {  %> selected <% } %> " href="/easy">Easy</a>
+        <a class="nav-item text-center ms-3 mb-2<% if(difficulty === "medium") {  %> selected <% } %> " href="/medium">Medium</a>
+        <a class="nav-item text-center ms-3 mb-2<% if(difficulty === "advanced") {  %> selected <% } %> " href="/advanced">Advanced</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-    <% if(difficulty === "easy") { %> 
-        <h2>Easy stuff</h2>
+<div class="container mt-5">
+    <div class="row">
+    <% if(difficulty === "easy") { %>
+        <% for(let i = 0; i<50; i++){ %>
+            <div class="col-12 col-lg-4 col-md-6 mb-3">
+                <%- include("partials/card") %> 
+            </div>
+        <% } %> 
     <% } else if(difficulty === "medium") { %> 
         <h2>Medium stuff</h2>
     <% } else { %> 
         <h2>Advanced stuff</h2>
     <% } %> 
+    </div>
 </div>
 
 
