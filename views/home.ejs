@@ -15,7 +15,33 @@
   </div>
 </nav>
 
-<div class="container"></div>
+<div class="container mt-4">
+  <h1 class="display-1 mb-5 text-white">Some random words for you</h1>
+  <div class="row">
+
+    <% for(let i = 0; i < 50; i++){ %>
+    <%  const ran = Math.floor(Math.random() * 3); %>
+    <%  const dataO = data[ran]; %>
+    <%  const dex = Math.floor(Math.random() * dataO.length);%>
+    <%  const wordObj = dataO[dex]; %>
+    <%  if(wordObj.meaning != "") {  %> 
+
+          <div class="col-12 col-lg-4 col-md-6 mb-3">
+             <%- include("partials/card", 
+                    {word: wordObj.word, 
+                     definition: wordObj.meaning.definition,
+                     synomyms: wordObj.meaning.synonyms,
+                     extra_info: wordObj.meaning.extra_info,
+                     mnemonic: wordObj.mnemonic
+                    }) %> 
+            </div>
+
+        <% }
+      } %>
+  </div>
+  <h4 class="m-5 text-white text-center">Need more? Just hit <a class="text-decoration-none text-white" 
+      href="/">here</a>&nbsp;&nbsp;:)</h4>
+</div>
 
 
 <%- include("partials/footer") %> 

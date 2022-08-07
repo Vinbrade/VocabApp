@@ -1,10 +1,16 @@
 <div class="card">
   <div class="card-body">
     <h5 class="card-title"><%= word %></h5>
-    <p class="sub-title"><%= definition %></p>
-    <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </p>
+    <p class="sub-title">Definition:</p>
+    <ul class="content">
+      <li class="word--text"><%= definition[0] %> </li>
+    </ul>
+    <% if (synomyms != '') { %>
+      <p class="sub-title">Synonyms:</p>
+      <ul class="content">
+        <li class="word--text"><%= synomyms %> </li>
+      </ul>
+    <% } %>
+      <button class="more-info">Read more</button>
   </div>
 </div>
