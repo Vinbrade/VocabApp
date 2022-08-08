@@ -1,0 +1,65 @@
+<div class="col-12">
+  <button
+    class="filter-button mb-3"
+    type="button"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvas"
+    aria-controls="offcanvas"
+  >
+    Filter
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-filter"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+      />
+    </svg>
+  </button>
+</div>
+<div
+  class="offcanvas offcanvas-start"
+  tabindex="-1"
+  id="offcanvas"
+  aria-labelledby="offcanvas"
+>
+  <div class="offcanvas-header mt-5">
+    <h5 class="offcanvas-title" id="offcanvas">Select range</h5>
+    <button
+      type="button"
+      class="closeit"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-x-lg"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="row">
+      <% const set = 50; const options = Math.ceil(max/set); let endI = set; let startI = 1%>
+      <%  for(let i = 0; i < options; i++){  %>
+            <button class="col-5 off-btn" value="<%=startI%>,<%=endI%>" onclick="fil(this)" ><%=startI%> - <%= endI %> </button>    
+      <% 
+            startI = endI + 1;
+            if ( i+2 != options ) endI += set;
+            else endI = max
+          } 
+      %> 
+    </div>
+  </div>
+</div>

@@ -1,14 +1,14 @@
 
 .card {
-    background-color: var(--dark-card-color);
-    color: #fff;
-    border: 1px solid var(--dark-border);
+    background-color: var(--card);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
 }
 
 .card-title {
-    color: #fff;
     font-weight: 700;
     font-size: 1.67rem;
+    margin-bottom: 0;
 }
 
 .sub-title {
@@ -21,25 +21,30 @@
 .word--text {
     font-weight: 400;
     font-size: 1.1rem;
-    color: #fdf0f0;
+    color: var(--card-content-text);
 }
 
 .content {
-    background-color: var(--dark-card-content-color);
+    background-color: var(--card-content);
     padding: 1rem;
     border-radius: 1rem;
 }
 
-.more-info {
+.more-info, .filter-button {
     border-radius: 0.7rem;
     padding: 0.5rem 0.7rem;
     border: 1px solid transparent;
-    background-color: var(--dark-button-text);
+    background-color: var(--button-info);
     font-weight: 500;
-    color: #fdf0f0;
+    color: var(--button-info-text);
     transition: all 300ms ease-out;
 }
 
 .more-info:hover {
-    background-color: #5b181d;
+    background-color: var(--button-info-hover);
+}
+
+.filter-button {
+    background-color: var(--button-filter);
+    color: var(--button-filter-text);
 }

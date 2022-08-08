@@ -1,55 +1,95 @@
-:root {
-    --dark-primary-color: #2b2222;
-    --dark-card-color: #201a1a;
-    --dark-accent-color: #ffb3b6;
-    --dark-text-color: #d6c1c0;
-    --dark-card-content-color: #2a2020;
-    --nav-color: #3c2323;
-    --dark-border: #907d7d;
-    --dark-button-text: #7e2a30;
-    --dark-shadow: #715656;
-    --light-button-text: #f8aeb1;
-    --light-primary-color: #faf2f1;
-    --dark-card-heading: #efcbd5;
+.theme-maroon {
+  --color: #fff;
+  --background: #2b2222;
+  --card: #201a1a;
+  --card-content: #2a2020;
+  --card-content-text: #fdf0f0;
+  --nav: #3c2323;
+  --card-border: #907d7d;
+  --button-info: #7e2a30;
+  --button-info-text: #fdf0f0;
+  --button-info-hover: #5b181d;
+  --button-filter: #f7b0b0;
+  --button-filter-text: #5b181d;
+  --btn-nav-bg: transparent;
+  --btn-nav-txt-br: #fff;
+  --btn-nav-selec: #fff;
+  --btn-nav-selec-txt: #5b181d;
+  --offcanvas: #5b181d;
+  --offcanvas-text: #fdf0f0;
+  --nav-shadow: 0 2.3px 5px 3.3px rgb(0 0 0 / 40%);
+  --card-shadow: none;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: 'Libre Franklin', sans-serif;
-    font-weight: 400;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 400;
 }
 
 body {
-    padding-top: 6rem;
-    background-color: var(--dark-primary-color);
+  padding-top: 6rem;
+  background-color: var(--background);
+  color: var(--color);
 }
 
 .navbar-brand {
-    font-family: 'Square Peg', cursive;
-    font-size: 3em;
+  font-family: "Square Peg", cursive;
+  font-size: 3em;
 }
 
 .nav-item {
-    width: 8rem;
-    font-size: 1.3em;
-    text-decoration: none;
-    padding: 0.3em;
-    color: white;
-    border: 2px solid white;
-    border-radius: 0.3rem;
-    transition: all 200ms ease-out;
+  width: 8rem;
+  font-size: 1.3em;
+  text-decoration: none;
+  padding: 0.3em;
+  color: var(--btn-nav-txt-br);
+  border: 2px solid var(--btn-nav-txt-br);
+  border-radius: 0.3rem;
+  transition: all 200ms ease-out;
 }
 
 .nav-item:hover,
 .nav-item:active,
 .selected {
-    background-color: white;
-    color: black;
+  background-color: var(--btn-nav-selec);
+  color: var(--btn-nav-selec-txt);
 }
-
 
 .navbar {
-    background-color: var(--nav-color);
-    box-shadow: 0 2.3px 5px 3.3px rgb(0 0 0 / 40%);
+  background-color: var(--nav);
+  box-shadow: var(--nav-shadow);
 }
 
+.offcanvas {
+  background-color: var(--offcanvas);
+  color: var(--offcanvas-text);
+}
+
+.offcanvas-title {
+    font-size: 2rem;
+}
+
+.closeit {
+    background-color: transparent;
+    color: var(--offcanvas-text);
+    border: none;
+    font-size: 2rem;
+}
+
+.off-btn {
+  background-color: var(--offcanvas);
+  color: var(--offcanvas-text);
+  border: 2px solid var(--offcanvas-text);
+  border-radius: 0.8rem;
+  margin: 0.5rem;
+  padding: 0.6rem;
+  transition: all 200ms ease-out;
+}
+
+.off-sel,
+.off-btn:focus,
+.off-btn:hover {
+  background-color: var(--offcanvas-text);
+  color: var(--offcanvas);
+}

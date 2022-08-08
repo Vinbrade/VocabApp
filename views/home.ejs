@@ -28,7 +28,8 @@
 
           <div class="col-12 col-lg-4 col-md-6 mb-3">
              <%- include("partials/card", 
-                    {word: wordObj.word, 
+                    {id: false,
+                     word: wordObj.word, 
                      definition: wordObj.meaning.definition,
                      synomyms: wordObj.meaning.synonyms,
                      extra_info: wordObj.meaning.extra_info,
@@ -39,8 +40,8 @@
         <% }
       } %>
   </div>
-  <h4 class="m-5 text-white text-center">Need more? Just hit <a class="text-decoration-none text-white" 
-      href="/">here</a>&nbsp;&nbsp;:)</h4>
+  <a class="text-decoration-none" 
+      href="/"><h4 class="m-5 text-white text-center">Need more? Just hit here&nbsp;&nbsp;:)</h4></a>
 </div>
 
 

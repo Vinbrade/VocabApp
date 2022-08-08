@@ -1,15 +1,17 @@
 
 <% const count = obj.length;
 
+let id = 1;
 
 for(let i = 0; i<count; i++){ 
     const data = obj[i];
     if(data.meaning != "") {
 %>
 
-    <div class="col-12 col-lg-4 col-md-6 mb-3">
+    <div class="col-12 col-lg-4 col-md-6 mb-3" id="card-options">
         <%- include("card", 
-                    {word: data.word, 
+                    {id: id,
+                     word: data.word, 
                      definition: data.meaning.definition,
                      synomyms: data.meaning.synonyms,
                      extra_info: data.meaning.extra_info,
@@ -17,6 +19,6 @@ for(let i = 0; i<count; i++){
                     }) %> 
     </div>
 
-    <% } %>
+    <% id++ } %>
 
 <% } %> 

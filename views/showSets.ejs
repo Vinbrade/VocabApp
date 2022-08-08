@@ -15,18 +15,22 @@
 </nav>
 
 <div class="container mt-5">
+
     <div class="row">
 
     <% if(difficulty === "easy") { %>
 
+        <%- include("partials/offcanvas", {max: 347}) %>
         <%- include("partials/cardRender", {obj: data[0]})  %> 
 
     <% } else if(difficulty === "medium") { %> 
 
+      <%- include("partials/offcanvas", {max: 502}) %>
       <%- include("partials/cardRender", {obj: data[1]})  %> 
 
     <% } else { %> 
 
+      <%- include("partials/offcanvas", {max: 537}) %>
       <%- include("partials/cardRender", {obj: data[2]})  %> 
 
     <% } %> 
