@@ -51,15 +51,18 @@
   </div>
   <div class="offcanvas-body">
     <div class="row">
-      <% const set = 50; const options = Math.ceil(max/set); let endI = set; let startI = 1%>
-      <%  for(let i = 0; i < options; i++){  %>
-            <button class="col-5 off-btn" value="<%=startI%>,<%=endI%>" onclick="fil(this)" ><%=startI%> - <%= endI %> </button>    
-      <% 
-            startI = endI + 1;
-            if ( i+2 != options ) endI += set;
-            else endI = max
-          } 
-      %> 
+      <% const set = 50; const options = Math.ceil(max/set); let endI = set; let
+      startI = 1%> <% for(let i = 0; i < options; i++){ %>
+      <button
+        class="col-5 off-btn"
+        data-bs-dismiss="offcanvas"
+        value="<%=startI%>,<%=endI%>"
+        onclick="fil(this)"
+      >
+        <%=startI%> - <%= endI %>
+      </button>
+      <% startI = endI + 1; if ( i+2 != options ) endI += set; else endI = max }
+      %>
     </div>
   </div>
 </div>

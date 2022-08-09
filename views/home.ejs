@@ -33,7 +33,9 @@
                      definition: wordObj.meaning.definition,
                      synomyms: wordObj.meaning.synonyms,
                      extra_info: wordObj.meaning.extra_info,
-                     mnemonic: wordObj.mnemonic
+                     mnemonic: wordObj.mnemonic,
+                     origin: ran,
+                     index: dex
                     }) %> 
             </div>
 
@@ -43,6 +45,8 @@
   <a class="text-decoration-none" 
       href="/"><h4 class="m-5 text-white text-center">Need more? Just hit here&nbsp;&nbsp;:)</h4></a>
 </div>
+
+<%- include("partials/modal") %> 
 
 
 <%- include("partials/footer") %> 

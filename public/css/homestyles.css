@@ -1,8 +1,9 @@
 .theme-maroon {
   --color: #fff;
-  --background: #2b2222;
+  --background: #2d2424;
   --card: #201a1a;
   --card-content: #2a2020;
+  --modal-bar: #563636;
   --card-content-text: #fdf0f0;
   --nav: #3c2323;
   --card-border: #907d7d;
@@ -33,6 +34,19 @@ body {
   color: var(--color);
 }
 
+
+.modal-body::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background-color: #676767;
+}
+
 .navbar-brand {
   font-family: "Square Peg", cursive;
   font-size: 3em;
@@ -43,6 +57,7 @@ body {
   font-size: 1.3em;
   text-decoration: none;
   padding: 0.3em;
+  background-color: var(--nav);
   color: var(--btn-nav-txt-br);
   border: 2px solid var(--btn-nav-txt-br);
   border-radius: 0.3rem;

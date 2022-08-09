@@ -14,7 +14,7 @@ function clearClass(){
 
 function fil(ele) {
   clearClass();
-  const limits = ele.value.toString().split(",");
+  const limits = ele.value.split(",");
   ele.classList.add("off-sel");
   const cards = document.querySelectorAll("#card-options");
 

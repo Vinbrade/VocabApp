@@ -1,0 +1,69 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="detailedInfo"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div
+    class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable modal-fullscreen-sm-down"
+  >
+    <div class="modal-content">
+      <div class="modal-body card">
+        <div class="container">
+          <div class="row">
+            <h5 class="modal-head card-title col-10 pt-2"></h5>
+            <button
+              type="button"
+              class="closeit col"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="row loading justify-content-center">
+            <div
+              class="spinner-border text-center mt-2"
+              style="display: none"
+              role="status"
+            ></div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-xl-8 data-col-1"></div>
+            <div class="col data-col-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-xl-8 data-col-3"></div>
+            <div class="col data-col-4"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="nav-item modalclose"
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../../js/modalProvider.js"></script>
