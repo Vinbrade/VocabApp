@@ -15,30 +15,19 @@
       <div class="modal-body card">
         <div class="container">
           <div class="row">
-            <h5 class="modal-head card-title col-10 pt-2"></h5>
+            <h5 class="modal-head card-title col-8 col-sm-10 pt-2"></h5>
             <button
               type="button"
               class="closeit col"
               data-bs-dismiss="modal"
               aria-label="Close"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-x-lg"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
-                />
-              </svg>
+              <i class="bi bi-x-lg"></i>
             </button>
           </div>
           <div class="row loading justify-content-center">
             <div
-              class="spinner-border text-center mt-2"
+              class="spinner-border text-center mt-2 mb-3"
               style="display: none"
               role="status"
             ></div>
@@ -53,17 +42,33 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="nav-item modalclose"
-          data-bs-dismiss="modal"
-        >
-          Close
-        </button>
+      <!--footer-->
+      <div class="container">
+        <div class="row d-flex justify-content-around">
+          <div class="col-2 left-arrow d-flex">
+            <button type="button" class="closeit" value="back" onclick="navigate(this)">
+              <i class="bi bi-arrow-left-square-fill"></i>
+            </button>
+          </div>
+          <div class="col-8 d-flex justify-content-evenly">
+            <button
+              type="button"
+              class="nav-item modalclose"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+          <div class="col-2 right-arrow d-flex justify-content-end">
+            <button type="button" class="closeit" value="next" onclick="navigate(this)">
+              <i class="bi bi-arrow-right-square-fill"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<script type="text/javascript" src="../../js/modalNavigation.js"></script>
 <script type="text/javascript" src="../../js/modalProvider.js"></script>

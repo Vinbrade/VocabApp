@@ -1,10 +1,17 @@
-async function sendData(ele) {
+function sendData(ele) {
+
   const indexList = ele.value.split(",");
   document.querySelectorAll(".text-data").forEach((ele) => {
     ele.remove();
   }); // clearing the modal
   document.querySelector(".modal-head").textContent = ""; // ''
   document.querySelector(".spinner-border").style.display = "block"; // loading the spinner
+
+  indexSetter(ele);
+  dataGetter(indexList);
+}
+
+async function dataGetter(indexList){
   const wordIndex = parseInt(indexList[1]);
   let res;
   if (indexList[0] == 0) res = await axios.get("/assets/easy.json");

@@ -60,10 +60,23 @@
 }
 
 .modalclose {
-    width: 5rem;
-    font-size: 1.12rem;
+    padding: 0.02rem 0.3rem;
+    font-size: 1.03rem;
+    margin: 0.8rem 0;
 }
 
 .modal-content {
     max-height: 700px;
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.53rem;
+    }
+    .sub-title {
+        font-size: 1.2rem;
+    }
+    .word--text {
+        font-size: 1rem;
+    }
 }

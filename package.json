@@ -4,6 +4,7 @@
   "description": "Flashcard collection to improve English Vocabulary",
   "main": "index.js",
   "scripts": {
+    "start": "npx nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vinbrade",

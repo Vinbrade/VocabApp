@@ -26,7 +26,7 @@
     <%  const wordObj = dataO[dex]; %>
     <%  if(wordObj.meaning != "") {  %> 
 
-          <div class="col-12 col-lg-4 col-md-6 mb-3">
+          <div class="col-12 col-lg-4 col-md-6 mb-3 home-cards" id="card-options" style="display: '';">
              <%- include("partials/card", 
                     {id: false,
                      word: wordObj.word, 
