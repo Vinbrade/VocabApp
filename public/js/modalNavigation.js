@@ -68,10 +68,11 @@ const navigate = function (arrow) {
 const rigthCard = function (arry, list) {
   let worId = arry[2] + 1;
   arry[2] = worId;
+  const last = list[list.length -1].value.split(",")[1];
   do {
     let worIn = arry[1] + 1;
     arry[1] = worIn;
-  } while (checkVal(arry, list) && arry[1] <= 0);
+  } while (checkVal(arry, list) && arry[1] <= last);
 };
 
 
