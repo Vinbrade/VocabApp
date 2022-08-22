@@ -16,9 +16,9 @@ async function dataGetter(indexList){
   let res;
   if (indexList[0] == 0) res = await axios.get("/assets/easy.json");
   else if (indexList[0] == 1) res = await axios.get("/assets/medium.json");
-  else if (indexList[0] == 2) {
-    res = await axios.get("/assets/advanced.json");
-  }
+  else if (indexList[0] == 2) res = await axios.get("/assets/advanced.json");
+  else if (indexList[0] == 3) res = await axios.get("/assets/ets_essential.json");
+  else if (indexList[0] == 4) res = await axios.get("/assets/ets_advanced.json");
   enterData(res.data, wordIndex);
 }
 

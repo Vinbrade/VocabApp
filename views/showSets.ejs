@@ -9,6 +9,8 @@
         <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "easy") {  %> selected <% } %> " href="/easy">Easy</a>
         <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "medium") {  %> selected <% } %> " href="/medium">Medium</a>
         <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "advanced") {  %> selected <% } %> " href="/advanced">Advanced</a>
+        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "ets-essential") {  %> selected <% } %> " href="/ets-essential">ETS Essential</a>
+        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "ets-advanced") {  %> selected <% } %> " href="/ets-advanced">ETS Advanced</a>
       </div>
     </div>
   </div>
@@ -28,12 +30,22 @@
       <%- include("partials/offcanvas", {max: 502}) %>
       <%- include("partials/cardRender", {obj: data[1], origin: 1})  %> 
 
-    <% } else { %> 
+    <% } else if(difficulty === "advanced"){ %> 
 
       <%- include("partials/offcanvas", {max: 537}) %>
       <%- include("partials/cardRender", {obj: data[2], origin: 2})  %> 
 
-    <% } %> 
+    <% } else if(difficulty === "ets-essential"){ %> 
+
+      <%- include("partials/offcanvas", {max: 491}) %>
+      <%- include("partials/cardRender", {obj: data[3], origin: 3})  %> 
+
+    <% } else {%>
+
+      <%- include("partials/offcanvas", {max: 487}) %>
+      <%- include("partials/cardRender", {obj: data[4], origin: 4})  %> 
+
+    <% } %>
 
     </div>
 </div>
