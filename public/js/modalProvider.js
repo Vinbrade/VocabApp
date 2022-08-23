@@ -14,11 +14,11 @@ function sendData(ele) {
 async function dataGetter(indexList){
   const wordIndex = parseInt(indexList[1]);
   let res;
-  if (indexList[0] == 0) res = await axios.get("/assets/easy.json");
-  else if (indexList[0] == 1) res = await axios.get("/assets/medium.json");
-  else if (indexList[0] == 2) res = await axios.get("/assets/advanced.json");
-  else if (indexList[0] == 3) res = await axios.get("/assets/ets_essential.json");
-  else if (indexList[0] == 4) res = await axios.get("/assets/ets_advanced.json");
+  if (indexList[0] == 0) res = await axios.get("/json/easy.json");
+  else if (indexList[0] == 1) res = await axios.get("/json/medium.json");
+  else if (indexList[0] == 2) res = await axios.get("/json/advanced.json");
+  else if (indexList[0] == 3) res = await axios.get("/json/ets_essential.json");
+  else if (indexList[0] == 4) res = await axios.get("/json/ets_advanced.json");
   enterData(res.data, wordIndex);
 }
 

@@ -1,0 +1,18 @@
+<form
+  autocomplete="off"
+  name="search-form"
+  class="mb-3 d-flex"
+  method="get"
+  action="/search"
+>
+  <input
+    type="text"
+    class="search ps-3 form-control"
+    name="query"
+    value="<%= query %>"
+    onkeyup="results(this.value)"
+    placeholder="Search"
+  />
+  <button type="submit" class="closeit"><i class="bi bi-search"></i></button>
+  <div id="result"></div>
+</form>
