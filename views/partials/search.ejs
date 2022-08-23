@@ -1,11 +1,11 @@
-<form autocomplete="off">
-  <input type="text" class="form-control search" name="query" />
-  <div id="result">
-    <ul>
-      <li>abate</li>
-      <li>aberrant</li>
-      <li>Lol</li>
-      <li>Misinterpretation</li>
-    </ul>
-  </div>
+<form autocomplete="off" name="seatch-form" class="mb-3 d-flex" onsubmit="queryRes(this, event)">
+  <input
+    type="text"
+    class="search ps-3 form-control"
+    name="query"
+    onkeyup="results(this.value)"
+    placeholder="Search"
+  />
+  <button type="submit" class="closeit"><i class="bi bi-search"></i></button>
+  <div id="result"></div>
 </form>
