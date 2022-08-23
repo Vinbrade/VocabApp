@@ -22,9 +22,9 @@ app.get("/json/:type", (req, res) => {
 })
 
 app.get("/search", (req, res) => {
-  const query = req.query.query.trim();
+  const query = req.query.query.trim().toLowerCase();
   const resultSet = getResultSet(query);
-  res.render("home", {search: true, data, resultSet, query})
+  res.render("home", {search: true, data, resultSet, query: req.query.query.trim()})
 });
 
 app.get("*", (req, res) => {
