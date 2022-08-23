@@ -12,13 +12,9 @@ function results(value) {
     resLis = makeList(value);
     let list = '';
     if(resLis && resLis.length != 0) {
-        for (i=0; i<resLis.length; i++) {
+        for(i=0; i<resLis.length; i++) {
             list += '<li>' + resLis[i] + '</li>';
         }
         res.innerHTML = '<ul>' + list + '</ul>'
     }
-}
-
-function queryRes(obj, ev) {
-    ev.preventDefault();
 }

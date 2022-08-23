@@ -1,8 +1,15 @@
-<form autocomplete="off" name="seatch-form" class="mb-3 d-flex" onsubmit="queryRes(this, event)">
+<form
+  autocomplete="off"
+  name="search-form"
+  class="mb-3 d-flex"
+  method="get"
+  action="/search"
+>
   <input
     type="text"
     class="search ps-3 form-control"
     name="query"
+    value="<%= query %>"
     onkeyup="results(this.value)"
     placeholder="Search"
   />

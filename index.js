@@ -1,5 +1,6 @@
 const express = require("express");
-const data = require("./getData");
+const data = require("./srcData/getData");
+const getResultSet = require("./srcData/searchRender");
 const app = express();
 const path = require("path");
 
@@ -9,7 +10,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.get("/:difficulty", (req, res) => {
+app.get("/words/:difficulty", (req, res) => {
   const difficulty = req.params.difficulty;
   res.render("showSets", { difficulty, data });
 });
@@ -20,6 +21,12 @@ app.get("/json/:type", (req, res) => {
     res.sendFile(type, options)
 })
 
+app.get("/search", (req, res) => {
+  const query = req.query.query.trim();
+  const resultSet = getResultSet(query);
+  res.render("home", {search: true, data, resultSet, query})
+});
+
 app.get("*", (req, res) => {
-  res.render("home", { data });
+  res.render("home", {search: false, data, query: ""});
 });
