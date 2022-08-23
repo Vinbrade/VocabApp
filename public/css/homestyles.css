@@ -110,6 +110,14 @@ body {
   color: var(--offcanvas);
 }
 
+.search {
+  position: relative;
+}
+
+#result {
+  position: absolute;
+}
+
 @media (max-width: 576px) {
   body{
     font-size: 0.85rem;

@@ -18,11 +18,12 @@
 </nav>
 
 <div class="container mt-4">
+  <%- include("partials/search") %> 
   <h1 class="display-1 mb-5 text-white">Some random words for you</h1>
   <div class="row">
 
     <% for(let i = 0; i < 50; i++){ %>
-    <%  const ran = Math.floor(Math.random() * 3); %>
+    <%  const ran = Math.floor(Math.random() * 5); %>
     <%  const dataO = data[ran]; %>
     <%  const dex = Math.floor(Math.random() * dataO.length);%>
     <%  const wordObj = dataO[dex]; %>
