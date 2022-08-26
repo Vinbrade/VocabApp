@@ -4,7 +4,7 @@ const getResultSet = require("./srcData/searchRender");
 const app = express();
 const path = require("path");
 
-app.listen(3000);
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
@@ -18,7 +18,7 @@ app.get("/words/:difficulty", (req, res) => {
 app.get("/json/:type", (req, res) => {
     const options = {root: path.join(__dirname,"/views/assets")};
     const type = req.params.type;
-    res.sendFile(type, options)
+    res.sendFile(type, options);
 })
 
 app.get("/search", (req, res) => {
@@ -30,3 +30,5 @@ app.get("/search", (req, res) => {
 app.get("*", (req, res) => {
   res.render("home", {search: false, data, query: ""});
 });
+
+app.listen(port);
