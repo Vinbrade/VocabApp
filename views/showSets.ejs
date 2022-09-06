@@ -1,16 +1,13 @@
 <%- include("partials/header") %> 
 
+<%- include("partials/navmodalsets")  %> 
 <%- include("partials/navbar")  %> 
   
     <div
-      class="collapse navbar-collapse"
-      id="navbarSupportedContent"
     ><div class="navbar-nav ms-lg-auto">
-        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "easy") {  %> selected <% } %> " href="/words/easy">Easy</a>
-        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "medium") {  %> selected <% } %> " href="/words/medium">Medium</a>
-        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "advanced") {  %> selected <% } %> " href="/words/advanced">Advanced</a>
-        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "ets-essential") {  %> selected <% } %> " href="/words/ets-essential">ETS Essential</a>
-        <a class="nav-item text-center ms-3 mb-3 mb-lg-2<% if(difficulty === "ets-advanced") {  %> selected <% } %> " href="/words/ets-advanced">ETS Advanced</a>
+      <button type="button" class="nav-modal-close" data-bs-toggle="modal" data-bs-target="#navModal">
+        <i class="bi bi-list"></i>
+      </button>
       </div>
     </div>
   </div>
@@ -22,28 +19,33 @@
 
     <% if(difficulty === "easy") { %>
 
-        <%- include("partials/offcanvas", {max: 347}) %>
+        <%- include("partials/offcanvas", {max: 347, part: 50, name: "Easy"}) %>
         <%- include("partials/cardRender", {obj: data[0], origin: 0})  %> 
 
     <% } else if(difficulty === "medium") { %> 
 
-      <%- include("partials/offcanvas", {max: 502}) %>
+      <%- include("partials/offcanvas", {max: 502, part: 50, name: "Medium"}) %>
       <%- include("partials/cardRender", {obj: data[1], origin: 1})  %> 
 
     <% } else if(difficulty === "advanced"){ %> 
 
-      <%- include("partials/offcanvas", {max: 537}) %>
+      <%- include("partials/offcanvas", {max: 537, part: 50, name: "Advanced"}) %>
       <%- include("partials/cardRender", {obj: data[2], origin: 2})  %> 
 
     <% } else if(difficulty === "ets-essential"){ %> 
 
-      <%- include("partials/offcanvas", {max: 491}) %>
+      <%- include("partials/offcanvas", {max: 491, part: 50, name: "ETS Essential"}) %>
       <%- include("partials/cardRender", {obj: data[3], origin: 3})  %> 
 
-    <% } else {%>
+    <% } else if(difficulty === "ets-advanced") {%>
 
-      <%- include("partials/offcanvas", {max: 487}) %>
+      <%- include("partials/offcanvas", {max: 487, part: 50, name: "ETS Advanced"}) %>
       <%- include("partials/cardRender", {obj: data[4], origin: 4})  %> 
+
+    <% } else if(difficulty === "gg900") {%>
+
+      <%- include("partials/offcanvas", {max: 957, part: 30, name: "GreGmat 900"}) %>
+      <%- include("partials/cardRender", {obj: data[5], origin: 5})  %> 
 
     <% } %>
 

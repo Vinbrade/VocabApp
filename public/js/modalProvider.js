@@ -19,6 +19,7 @@ async function dataGetter(indexList){
   else if (indexList[0] == 2) res = await axios.get("/json/advanced.json");
   else if (indexList[0] == 3) res = await axios.get("/json/ets_essential.json");
   else if (indexList[0] == 4) res = await axios.get("/json/ets_advanced.json");
+  else if (indexList[0] == 5) res = await axios.get("/json/gg900.json");
   enterData(res.data, wordIndex);
 }
 

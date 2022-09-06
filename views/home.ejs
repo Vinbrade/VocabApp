@@ -2,17 +2,14 @@
 <%- include("partials/header") %> 
 
 
+<%- include("partials/navmodalhome")  %> 
 <%- include("partials/navbar")  %> 
   
     <div
-        class="collapse navbar-collapse"
-        id="navbarSupportedContent"
         ><div class="navbar-nav ms-lg-auto">
-          <a class="nav-item text-center ms-3 mb-3 mb-lg-2" href="/words/easy">Easy</a>
-          <a class="nav-item text-center ms-3 mb-3 mb-lg-2" href="/words/medium">Medium</a>
-          <a class="nav-item text-center ms-3 mb-3 mb-lg-2" href="/words/advanced">Advanced</a>
-          <a class="nav-item text-center ms-3 mb-3 mb-lg-2" href="/words/ets-essential">ETS Essential</a>
-          <a class="nav-item text-center ms-3 mb-3 mb-lg-2" href="/words/ets-advanced">ETS Advanced</a>
+          <button type="button" class="nav-modal-close" data-bs-toggle="modal" data-bs-target="#navModal">
+            <i class="bi bi-list"></i>
+          </button>
     </div>
   </div>
 </nav>

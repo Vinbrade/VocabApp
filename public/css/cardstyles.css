@@ -1,82 +1,95 @@
-
 .card {
-    background-color: var(--card);
-    box-shadow: var(--card-shadow);
+  background-color: var(--card);
+  box-shadow: var(--card-shadow);
 }
 
 .card-title {
-    font-weight: 700;
-    font-size: 1.67rem;
-    margin-bottom: 0;
+  font-weight: 700;
+  font-size: 1.67rem;
+  margin-bottom: 0;
 }
 
 .sub-title {
-    font-weight: 200;
-    font-size: 1.53rem;
-    margin-top: 0.8rem;
-    margin-bottom: 0.5rem;
+  font-weight: 200;
+  font-size: 1.53rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .word--text {
-    font-weight: 400;
-    font-size: 1.2rem;
-    color: var(--card-content-text);
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--card-content-text);
 }
 
 .content {
-    background-color: var(--card-content);
-    padding: 1rem;
-    border-radius: 1rem;
+  background-color: var(--card-content);
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-.more-info, .filter-button {
-    border-radius: 0.7rem;
-    padding: 0.5rem 0.7rem;
-    border: 1px solid transparent;
-    background-color: var(--button-info);
-    font-weight: 500;
-    color: var(--button-info-text);
-    transition: all 300ms ease-out;
+.more-info,
+.filter-button {
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid transparent;
+  background-color: var(--button-info);
+  font-weight: 500;
+  color: var(--button-info-text);
+  transition: all 300ms ease-out;
 }
 
 .more-info:hover {
-    background-color: var(--button-info-hover);
+  background-color: var(--button-info-hover);
 }
 
 .filter-button {
-    background-color: var(--button-filter);
-    color: var(--button-filter-text);
+  background-color: var(--button-filter);
+  color: var(--button-filter-text);
 }
 
-.modal-footer, .modal-content {
-    background-color: var(--modal-bar);
-    border: none;
+.modal-footer,
+.modal-content {
+  background-color: var(--modal-bar);
+  border: none;
 }
 
 .modal-body.card {
-    border-radius: 0.375rem 0.375rem 0 0;
-    border: 1px solid var(--card-border);
-    border-bottom: 0;
+  border-radius: 0.375rem 0.375rem 0 0;
+  border: 1px solid var(--card-border);
+  border-bottom: 0;
 }
 
 .modalclose {
-    padding: 0.02rem 0.3rem;
-    font-size: 1.03rem;
-    margin: 0.8rem 0;
+  padding: 0.02rem 0.3rem;
+  font-size: 1.03rem;
+  margin: 0.8rem 0.3rem;
+  width: 8rem;
+  text-decoration: none;
+  background-color: var(--nav);
+  color: var(--btn-nav-txt-br);
+  border: 2px solid var(--btn-nav-txt-br);
+  border-radius: 0.3rem;
+  transition: all 200ms ease-out;
 }
+.modalclose:hover,
+.modalclose:active {
+        background-color: var(--btn-nav-selec);
+        color: var(--btn-nav-selec-txt);
+      }
 
 .modal-content {
-    max-height: 700px;
+  max-height: 700px;
 }
 
 @media (max-width: 576px) {
-    .card-title {
-        font-size: 1.53rem;
-    }
-    .sub-title {
-        font-size: 1.2rem;
-    }
-    .word--text {
-        font-size: 1rem;
-    }
+  .card-title {
+    font-size: 1.53rem;
+  }
+  .sub-title {
+    font-size: 1.2rem;
+  }
+  .word--text {
+    font-size: 1rem;
+  }
 }

@@ -1,25 +1,28 @@
-<div class="col-12">
-  <button
-    class="filter-button mb-3"
-    type="button"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#offcanvas"
-    aria-controls="offcanvas"
-  >
-    Filter
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="16"
-      height="16"
-      fill="currentColor"
-      class="bi bi-filter"
-      viewBox="0 0 16 16"
+<div class="row">
+  <div class="col">
+    <button
+      class="filter-button mb-2"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas"
+      aria-controls="offcanvas"
     >
-      <path
-        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
-      />
-    </svg>
-  </button>
+      Filter
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-filter"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="display-5 text-center col-12 mb-4"><%= name %></div>
 </div>
 <div
   class="offcanvas offcanvas-start"
@@ -40,15 +43,16 @@
   </div>
   <div class="offcanvas-body">
     <div class="row">
-      <% const set = 50; const options = Math.ceil(max/set); let endI = set; let
-      startI = 1%> <% for(let i = 0; i < options; i++){ %>
+      <% const set = part; const options = Math.ceil(max/set); let endI = set;
+      let startI = 1%> <% for(let i = 0; i < options; i++){ %>
       <button
         class="col-5 off-btn"
         data-bs-dismiss="offcanvas"
         value="<%=startI%>,<%=endI%>"
         onclick="fil(this)"
       >
-        <%=startI%> - <%= endI %>
+        <% if(name == "GreGmat 900") { %> Group <%= i+1 %> <%} else { %> <%=startI%> - <%=
+        endI %> <% } %>
       </button>
       <% startI = endI + 1; if ( i+2 != options ) endI += set; else endI = max }
       %>

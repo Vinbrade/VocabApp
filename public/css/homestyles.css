@@ -53,25 +53,6 @@ body {
   font-size: 3em;
 }
 
-.nav-item {
-  width: 10rem;
-  font-size: 1.3em;
-  text-decoration: none;
-  padding: 0.3em;
-  background-color: var(--nav);
-  color: var(--btn-nav-txt-br);
-  border: 2px solid var(--btn-nav-txt-br);
-  border-radius: 0.3rem;
-  transition: all 200ms ease-out;
-}
-
-.nav-item:hover,
-.nav-item:active,
-.selected {
-  background-color: var(--btn-nav-selec);
-  color: var(--btn-nav-selec-txt);
-}
-
 .navbar {
   background-color: var(--nav);
   box-shadow: var(--nav-shadow);
@@ -143,16 +124,22 @@ body {
   padding: auto;
 }
 
-#result ul::-webkit-scrollbar {
+#result ul::-webkit-scrollbar,
+.offcanvas-body::-webkit-scrollbar {
   width: 5px;
 }
 
-#result ul::-webkit-scrollbar-track {
+#result ul::-webkit-scrollbar-track,
+.offcanvas-body::-webkit-scrollbar-track  {
   background-color: transparent;
 }
 
 #result ul::-webkit-scrollbar-thumb {
-  background-color: var(--nav);
+    background-color: var(--nav);
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+  background-color: var(--offcanvas-text);
 }
 
 #result ul {
@@ -179,11 +166,62 @@ form .closeit {
   }
 }
 
-@media (min-width: 992px ) and (max-width: 1200px) {
-  .nav-item {
-    font-size: 1.1rem;
-    width: 8rem;
-    height: 3rem;
-    padding: 0.63rem 0.1rem 0.1rem 0.1rem;
-  }
+
+#navmodal {
+  background-color: rgba(0, 0, 0, 0.526);
+  min-height: 100vh;
+}
+
+.nav-modal-con {
+  display: flex;
+  padding: 2em;
+}
+
+.nav-modal-body {
+  margin-right: auto;
+  margin-top: 8rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-bottom: 1rem;
+  font-size: 1.7em;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+  padding: 0.6rem;
+  background-color: #09070739;
+  color: #fff;
+  border: 2px solid #605757;
+  border-radius: 3rem;
+  transition: all 200ms ease-out;
+}
+
+.nav-item:hover,
+.nav-item:active,
+.selected {
+  color: var(--btn-nav-selec-txt);
+  transform: translateX(75px);
+  background-color: #fff;
+  border: 2px solid #fff;
+  font-weight: 700;
+}
+
+.nav-modal-close {
+  background-color: transparent;
+  padding: 0.3rem, 0.5rem;
+  font-size: 2rem;
+  color: #978f8f;
+  border-radius: 0.5rem;
+  border: 2px solid #978f8f;
+}
+
+.open-close {
+  margin-top: 1em;
+  background-color: #fff;
+  color: var(--btn-nav-selec-txt);
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
