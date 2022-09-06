@@ -166,7 +166,6 @@ form .closeit {
   }
 }
 
-
 #navmodal {
   background-color: rgba(0, 0, 0, 0.526);
   min-height: 100vh;
@@ -179,7 +178,7 @@ form .closeit {
 
 .nav-modal-body {
   margin-right: auto;
-  margin-top: 8rem;
+  margin-top: 4rem;
   max-width: 350px;
   display: flex;
   flex-direction: column;
